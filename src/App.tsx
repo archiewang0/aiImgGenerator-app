@@ -1,16 +1,14 @@
 import { useState } from 'react'
+import Header from '@/components/Header';
 
 function App() {
   const [count, setCount] = useState(0)
+    return (
+      <>
+        <Header/>
 
-  return (
-    <>
-
-      <h1 className=' text-red-500 opacity-10 bg-black'>Vite + React!!!!!!!</h1>
-      <p className=' bg-white'>teststs</p>
-
-    </>
-  )
+      </>
+    )
 }
 
 export default App
