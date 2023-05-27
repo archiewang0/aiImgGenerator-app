@@ -82,19 +82,19 @@ const index: FC<FormProps> = ({setListImags ,setIsLoading, setRequestImgNumber})
     return <form className=' relative my-8 max-w-md' onSubmit={handleSumbit}>
         
         <div className=' felx mb-2 justify-between'>
-            <label className=' w-full md:w-1/2 inline-flex pr-2'>
-                <span>產生圖片數量:</span>
+            <label className=' w-full md:w-1/2 inline-flex md:pr-2 snap-center mb-2 md:md-0'>
+                <span className=' leading-5'>產生圖片數量:</span>
                 <input type="number" 
-                    className=' flex-grow'
+                    className=' flex-grow px-2 ml-2'
                     defaultValue="1" 
                     min="1" max="10" 
                     name="n" onChange={handleInputElemnetChange}/>
             </label>
 
-            <label className='w-full md:w-1/2 inline-flex pl-2'>
-                <span>圖片解析度:</span>
+            <label className='w-full md:w-1/2 inline-flex md:pl-2'>
+                <span className='leading-5'>圖片解析度:</span>
                 <select 
-                    className=' flex-grow'
+                    className=' flex-grow px-2 ml-2'
                     defaultValue="512x512" name="size" onChange={handleInputElemnetChange}>
                     <option value="256x256">256x256</option>
                     <option value="512x512">512x512</option>
