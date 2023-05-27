@@ -55,7 +55,9 @@ const index: FC<FormProps> = ({setListImags ,setIsLoading, setRequestImgNumber})
             throw new Error('請輸入生產圖片的關鍵字')
         }
 
-        const response = await fetch('http://localhost:5500/openai/images',{
+        // const response = await fetch('http://localhost:5500/openai/images',{
+        // 關閉本地開發的 server
+        const response = await fetch('https://aiimggenerator-app-api-production.up.railway.app/openai/images',{
             method: 'POST',
             headers: {"Content-type": "application/json"},
             body: JSON.stringify({
